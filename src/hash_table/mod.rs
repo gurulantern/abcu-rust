@@ -83,6 +83,7 @@ impl HashTable {
     }
 
     /// Prints all courses in the hash table and their prerequisites
+    /// Time complexity: O(n log n) where n is the number of courses in the hash table
     pub fn print_all(&self) {
         // Initialize a vector to store all courses
         let mut all_courses = Vec::new();
@@ -101,7 +102,7 @@ impl HashTable {
         }
 
         // Sort the vector by course number
-        // Time complexity: O(n log n) where n is the number of courses
+        // Time complexity: O(n log n) where n is the number of courses in the hash table
         all_courses.sort_by(|a, b| a.course_number.cmp(&b.course_number));
 
         // Print all courses and their prerequisites
